@@ -10,6 +10,10 @@
       </div>
       <v-spacer></v-spacer>
       <v-btn v-if="userId" @click="logoutUser" text>Logout</v-btn>
+      <template v-else>
+        <v-btn text rounded to="/">SIGN IN</v-btn>
+        <v-btn text rounded to="/sign-up">SIGN UP</v-btn>
+      </template>
     </v-app-bar>
     <v-navigation-drawer v-model="drawer" absolute bottom temporary>
       <v-list nav dense>
